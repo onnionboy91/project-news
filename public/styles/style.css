@@ -1,0 +1,12 @@
+.title {
+  display: flex;
+  justify-content: center;
+}
+#add-hero {
+  margin-top: 50px;
+}
+.cards-heroes {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
