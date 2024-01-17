@@ -42,9 +42,10 @@ function HomePage({ title, user, news }) {
       <h1 className='title'>Новости</h1>
       <div className='news-cards'>
         {news.map((newsOne) => (
-      
+   
           <NewsItem key={newsOne.id} newsOne={newsOne}/>
         ))}
+
       </div>
     </Layout>
   );

@@ -13,6 +13,7 @@ function Layout({ title, children, user }) {
         />
         <link rel="stylesheet" href="/styles/style.css" />
         <script defer src="/scripts/sing.js" />
+        <script defer src="/scripts/search.js" />
       </head>
       <NavBar user={user} />
       <body>{children}</body>
