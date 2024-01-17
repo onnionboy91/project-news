@@ -19,7 +19,7 @@ module.exports = {
       },
       password: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
