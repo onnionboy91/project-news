@@ -39,7 +39,7 @@ function HomePage({ title, user }) {
         </form>
       </div>
       <h1 className='title'>Новости</h1>
-      <div className='news-cards'>
+      <div className='news-cards blabla'>
         <NewsItem />
       </div>
     </Layout>
