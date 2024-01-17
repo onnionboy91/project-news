@@ -1,6 +1,8 @@
 const router = require('express').Router();
-
+const bcrypt = require('bcrypt');
 const { User } = require('../../db/models');
+const generateTokens = require('../../utils/authUtils');
+const configJWT = require('../../middleware/configJWT');
 
 router.post('/in', async (req, res) => {
   try {
@@ -17,7 +19,7 @@ router.post('/in', async (req, res) => {
         maxAge: 1000 * 60 * 5,
         httpOnly: true,
       });
-      res.cookie('access', refreshToken, {
+      res.cookie('refresh', refreshToken, {
         maxAge: 1000 * 60 * 60 * 12,
         httpOnly: true,
       });
@@ -49,7 +51,7 @@ router.post('/up', async (req, res) => {
       maxAge: 1000 * 60 * 5,
       httpOnly: true,
     });
-    res.cookie('access', refreshToken, {
+    res.cookie('refresh', refreshToken, {
       maxAge: 1000 * 60 * 60 * 12,
       httpOnly: true,
     });
@@ -58,5 +60,10 @@ router.post('/up', async (req, res) => {
   } catch ({ message }) {
     res.json({ message, text: 'ошибка на api-routes-in' });
   }
+});
+
+router.get('/logout', (req, res) => {
+  res.clearCookie(configJWT.access.type).clearCookie(configJWT.refresh.type);
+  res.redirect('/');
 });
 module.exports = router;

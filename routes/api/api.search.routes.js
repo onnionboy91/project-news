@@ -4,6 +4,7 @@ const router = require('router').Router();
 router.post('/', async (req, res) => {
   try {
     const { word } = req.body;
+    const 
   } catch ({ message }) {
     res.json({ message });
   }
