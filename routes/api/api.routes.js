@@ -2,6 +2,8 @@ const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const { User } = require('../../db/models');
 const generateTokens = require('../../utils/authUtils');
+const configJWT = require('../../middleware/configJWT');
+
 router.post('/in', async (req, res) => {
   try {
     const { name, password } = req.body;
@@ -59,5 +61,10 @@ router.post('/up', async (req, res) => {
     console.log();
     res.json({ message, text: 'ошибка на api-routes-in' });
   }
+});
+
+router.get('/logout', (req, res) => {
+  res.clearCookie(configJWT.access.type).clearCookie(configJWT.refresh.type);
+  res.redirect('/');
 });
 module.exports = router;
