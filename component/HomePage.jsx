@@ -2,7 +2,8 @@ const React = require('react');
 const Layout = require('./Layout');
 const NewsItem = require('./NewsItem');
 
-function HomePage({ title, user }) {
+function HomePage({ title, user, news }) {
+  console.log(news);
   return (
     <Layout title={title} user={user}>
       <div>
@@ -21,7 +22,7 @@ function HomePage({ title, user }) {
               id='exampleInputEmail1'
               aria-describedby='emailHelp'
             />
-          </div>
+          </div> 
           <div className='mb-3'>
             <label htmlFor='exampleInputPassword1' className='form-label'>
               Исключить слово
@@ -40,7 +41,10 @@ function HomePage({ title, user }) {
       </div>
       <h1 className='title'>Новости</h1>
       <div className='news-cards'>
-        <NewsItem />
+        {news.map((newsOne) => (
+      
+          <NewsItem key={newsOne.id} newsOne={newsOne}/>
+        ))}
       </div>
     </Layout>
   );

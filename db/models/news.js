@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-    tittle: {
+    tittle: { //2 tt
       allowNull: false,
       type: DataTypes.TEXT
     },
