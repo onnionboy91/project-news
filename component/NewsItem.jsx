@@ -1,13 +1,13 @@
 const React = require('react');
 
-function NewsItem() {
+function NewsItem({newsOne}) {
   return (
-    <div className='card' style={{ width: '300px', height: '300px' }}>
-      <img src='...' className='card-img-top' alt='...' />
+    <div className='card' style={{ width: '18rem', margin: '20px' }}>
+      <img src={newsOne.img} className='card-img-top' alt={`${newsOne.id}`} />
       <div className='card-body'>
-        <h5 className='card-title'>Card title</h5>
+        <h5 className='card-title'>{newsOne.tittle}</h5>
         <a href='/news' className='btn btn-primary'>
-          Подробнее
+          Подробнее 
         </a>
       </div>
     </div>
