@@ -18,6 +18,7 @@ if (singInForm) {
     const data = await res.json();
     if (data.message === 'успех') {
       window.location.assign('/');
+      return;
     }
     alert(data.message);
   });
@@ -42,6 +43,7 @@ if (singUpForm) {
     const data = await res.json();
     if (data.message === 'успех') {
       window.location.assign('/');
+      return;
     }
     alert(data.message);
   });

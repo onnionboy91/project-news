@@ -58,6 +58,7 @@ router.post('/up', async (req, res) => {
 
     res.json({ message: 'успех' });
   } catch ({ message }) {
+    console.log();
     res.json({ message, text: 'ошибка на api-routes-in' });
   }
 });
