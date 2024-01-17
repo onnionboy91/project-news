@@ -2,11 +2,9 @@
   display: flex;
   justify-content: center;
 }
-#add-hero {
-  margin-top: 50px;
-}
-.cards-heroes {
-  margin-top: 50px;
+
+.card {
   display: flex;
   justify-content: center;
+  margin: 50px;
 }
