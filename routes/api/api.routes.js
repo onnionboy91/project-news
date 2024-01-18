@@ -58,13 +58,11 @@ router.post('/up', async (req, res) => {
 
     res.json({ message: 'успех' });
   } catch ({ message }) {
-    console.log();
     res.json({ message, text: 'ошибка на api-routes-in' });
   }
 });
 
 router.get('/logout', (req, res) => {
-  console.log(configJWT.access.type);
   res.clearCookie(configJWT.access.type).clearCookie(configJWT.refresh.type);
   res.redirect('/');
 });

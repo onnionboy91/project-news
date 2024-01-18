@@ -1,17 +1,24 @@
 const React = require('react');
+const Layout = require('./Layout');
 
-function NewsPage() {
+function NewsPage({title, newsOne,user}) {
   return (
-    <div className='card' style={{ display: 'flex' }}>
-      <img src='...' className='card-img-top' alt='...' />
+    <Layout title={title} user={user}>
+      <h1>{newsOne.tittle}</h1>
+      <div className='card' style={{ display: 'flex' }}>
+      <img src={newsOne.img} className='card-img-top' alt='...' />
       <div className='card-body'>
-        <h5 className='card-title'>Card title</h5>
         <p class='card-text'>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          {newsOne.description}
         </p>
       </div>
     </div>
+    <li className='nav-item'>
+              <a className='nav-link' aria-current='page' href='/'>
+                Вернуться на главную
+              </a>
+            </li>
+    </Layout>
   );
 }
 

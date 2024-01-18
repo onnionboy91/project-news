@@ -28,7 +28,6 @@ if (singUpForm) {
   singUpForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const { name, password, rpassword } = event.target;
-    console.log(name, password, rpassword);
     const res = await fetch('/api/sing/up', {
       method: 'post',
       headers: {
