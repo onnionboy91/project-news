@@ -61,4 +61,13 @@ body{
   width: 18rem;
   margin:20px;
  }
+ .container {
+  margin-top: 70px;
+  width: 600px;
+
+ }
+ .search {
+  width: 1000px;
+
+ }
 
