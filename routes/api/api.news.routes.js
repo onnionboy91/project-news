@@ -22,8 +22,7 @@ router.post('/', upload.single('img'), async (req, res) => {
     const newFileUrl = `/img/${req.file.originalname}`;
 
     const news = await News.create({ tittle, img: newFileUrl, description });
-    // const currentHero = await Hero.findOne({ where: { id: hero.id }, include: Like });
-
+    
     const html = res.renderComponent(NewsItem, { news }, { doctype: false });
     res.json({ message: 'success', html });
   } catch ({ message }) {
