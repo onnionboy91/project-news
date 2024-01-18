@@ -33,7 +33,7 @@ function AddNewsForm() {
           </label>
           <input name="description" type="text" className="form-control" id="exampleInputPassword1" />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary ">
           Добавить
         </button>
       </form>

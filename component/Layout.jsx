@@ -19,7 +19,12 @@ function Layout({ title, children, user }) {
 
       </head>
       <NavBar user={user} />
-      <body>{children}</body>
+      <body>
+         
+        
+       {children}
+        
+      </body>
     </html>
   );
 }
