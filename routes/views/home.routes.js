@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const HomePage = require('../../component/HomePage');
+const NewsPage = require('../../component/NewsPage');
 const {News, User} = require('../../db/models')
 
 router.get('/', async (req, res) => {
@@ -22,7 +23,4 @@ router.get('/:newsOneId', async (req,res) => {
     res.json({message})
   }
 })
-module.exports = router;
-
-
 module.exports = router;
