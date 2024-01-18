@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const HomePage = require('../../component/HomePage');
-const {News} = require('../../db/models')
+const {News, User} = require('../../db/models')
 
 router.get('/', async (req, res) => {
   try {

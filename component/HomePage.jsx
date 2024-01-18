@@ -1,14 +1,20 @@
 const React = require('react');
 const Layout = require('./Layout');
 const NewsItem = require('./NewsItem');
-
+const AddNewsForm = require('./AddNewsForm')
 function HomePage({ title, user, news }) {
-  console.log(news);
   return (
     <Layout title={title} user={user}>
+     
+
+      {user && user.isAdmin===true && (
+          <AddNewsForm/>
+        )}
       <div>
         <h1 className='title'>Home page</h1>
       </div>
+      
+      
       <div className='search' style={{ margin: '50px' }}>
         <form id='search-news'>
           <div className='mb-3'>

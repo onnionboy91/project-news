@@ -19,6 +19,10 @@ module.exports = (sequelize, DataTypes) => {
         unique: true,
         type: DataTypes.TEXT,
       },
+      isAdmin: {
+        allowNull: false,
+        type: DataTypes.BOOLEAN,
+      },
       img: {
         type: DataTypes.TEXT,
       },
