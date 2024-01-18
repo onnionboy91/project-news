@@ -64,6 +64,7 @@ router.post('/up', async (req, res) => {
 });
 
 router.get('/logout', (req, res) => {
+  console.log(configJWT.access.type);
   res.clearCookie(configJWT.access.type).clearCookie(configJWT.refresh.type);
   res.redirect('/');
 });

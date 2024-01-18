@@ -28,7 +28,12 @@ function NavBar({ user }) {
             {user ? (
               <>
                 <li className='nav-item'>
-                  <a className='nav-link' href='/'>
+                  <a className='nav-link' href='#'>
+                    {user.name}
+                  </a>
+                </li>
+                <li className='nav-item'>
+                  <a className='nav-link' href='/api/sing/logout'>
                     Logout
                   </a>
                 </li>
@@ -47,11 +52,6 @@ function NavBar({ user }) {
                 </li>
               </>
             )}
-            <li className='nav-item'>
-              <a className='nav-link' href='#'>
-                {user.name}
-              </a>
-            </li>
           </ul>
         </div>
       </div>
