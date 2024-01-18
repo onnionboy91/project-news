@@ -30,4 +30,17 @@ router.post('/', upload.single('img'), async (req, res) => {
   }
 });
 
+router.delete('/:newsId', async (req, res) => {
+  try {
+    const { newsId } = req.params;
+    const result = await News.destroy({ where: { id: newsId } });
+    if (result > 0) {
+      res.json({ message: 'success' });
+      return;
+    }
+  } catch ({ message }) {
+    res.json({ message: 'error delete' });
+  }
+});
+
 module.exports = router;

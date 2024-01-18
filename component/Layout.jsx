@@ -17,6 +17,7 @@ function Layout({ title, children, user }) {
         <script defer src='/scripts/search.js' />
         <script defer src='/scripts/addComment.js' />
         <script defer src='/scripts/add.js' />
+        <script defer src='/scripts/delete.js' />
       </head>
       <NavBar user={user} />
       <body>{children}</body>
