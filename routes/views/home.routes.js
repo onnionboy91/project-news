@@ -12,4 +12,17 @@ router.get('/', async (req, res) => {
 }
 });
 
+router.get('/:newsOneId', async (req,res) => {
+  try {
+    const {newsOneId} = req.params
+    const newsOne = await News.findOne({where: { id: newsOneId}})
+    const html = res.renderComponent(NewsPage, {title: `${newsOne.tittle}`, newsOne})
+    res.send(html)
+  } catch ({message}) {
+    res.json({message})
+  }
+})
+module.exports = router;
+
+
 module.exports = router;
