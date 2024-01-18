@@ -5,12 +5,13 @@ const singRouter = require('./views/sing.routes');
 // api
 const apiSingRouter = require('./api/api.routes');
 const apiSearchRouter = require('./api/api.search.routes');
-
+const commentsRouter = require('./api/api.comments.routes')
 // view use
 router.use('/', homeRouter);
 router.use('/sing', singRouter);
 // api use
 router.use('/api/sing', apiSingRouter);
 router.use('/api', apiSearchRouter);
+router.use('/api/comments', commentsRouter)
 
 module.exports = router;
