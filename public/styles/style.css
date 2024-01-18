@@ -15,3 +15,50 @@ input {
   margin-bottom: 10px;
   box-sizing: border-box;
 }
+.navbar-nav{
+  
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+body{
+  background-image: url(https://img.freepik.com/free-photo/top-view-old-french-newspaper-pieces_23-2149318857.jpg?w=1380&t=st=1705569633~exp=1705570233~hmac=79f16626b365866f4d4369357b511f561e3e5655b7798051d5692a29683cdffc);
+  
+}
+.left-nav {
+ 
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 0
+}
+.rigth-nav {
+  display: flex;
+  flex-direction: row;
+  margin-right: 50px;
+}
+.news-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 100px;
+  justify-content: space-between;
+  
+}
+.title {
+  margin-top: 50px;
+}
+.container-fluid{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff; 
+  z-index: 100;
+ }
+ .card {
+  
+  width: 18rem;
+  margin:20px;
+ }
+
