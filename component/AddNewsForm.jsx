@@ -31,15 +31,10 @@ function AddNewsForm() {
           <label htmlFor='exampleInputPassword1' className='form-label'>
             Описание
           </label>
-          <input
-            name='description'
-            type='text'
-            className='form-control'
-            id='exampleInputPassword1'
-          />
+          <input name="description" type="text" className="form-control" id="exampleInputPassword1" />
         </div>
-        <button type='submit' className='btn btn-primary'>
-          Submit
+        <button type="submit" className="btn btn-primary">
+          Добавить
         </button>
       </form>
     </div>
