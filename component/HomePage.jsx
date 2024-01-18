@@ -45,8 +45,8 @@ function HomePage({ title, user, news }) {
           </button>
         </form>
       </div>
-      <h1 className='title'>Новости</h1>
-      <div className='news-cards'>
+      <h1 className='title'>News</h1>
+      <div className='news-cards container-cards'>
         {news.map((newsOne) => (
    
           <NewsItem key={newsOne.id} newsOne={newsOne}/>

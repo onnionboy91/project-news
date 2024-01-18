@@ -16,7 +16,12 @@ function Layout({ title, children, user }) {
         <script defer src="/scripts/search.js" />
       </head>
       <NavBar user={user} />
-      <body>{children}</body>
+      <body>
+         
+        
+       {children}
+        
+      </body>
     </html>
   );
 }
