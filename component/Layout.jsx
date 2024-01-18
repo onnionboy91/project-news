@@ -11,10 +11,12 @@ function Layout({ title, children, user }) {
           rel='stylesheet'
           crossOrigin='anonymous'
         />
-        <link rel='stylesheet' href='/styles/style.css' />
-        <script defer src='/scripts/sing.js' />
-        <script defer src='/scripts/search.js' />
-        <script defer src='/scripts/add.js' />
+
+        <link rel="stylesheet" href="/styles/style.css" />
+        <script defer src="/scripts/sing.js" />
+        <script defer src="/scripts/search.js" />
+        <script defer src="/scripts/addComment.js" />
+
       </head>
       <NavBar user={user} />
       <body>{children}</body>

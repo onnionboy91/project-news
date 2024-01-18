@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const HomePage = require('../../component/HomePage');
 const NewsPage = require('../../component/NewsPage');
-const {News, User} = require('../../db/models')
+const {News, User, Comment} = require('../../db/models')
 
 router.get('/', async (req, res) => {
   try {
@@ -17,7 +17,8 @@ router.get('/:newsOneId', async (req,res) => {
   try {
     const {newsOneId} = req.params
     const newsOne = await News.findOne({where: { id: newsOneId}})
-    const html = res.renderComponent(NewsPage, {title: `${newsOne.tittle}`, newsOne})
+    const comments = await Comment.findAll({where: {news_id:newsOneId}})
+    const html = res.renderComponent(NewsPage, {title: `${newsOne.tittle}`, newsOne, comments})
     res.send(html)
   } catch ({message}) {
     res.json({message})

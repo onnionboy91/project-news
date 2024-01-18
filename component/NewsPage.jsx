@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
-
-function NewsPage({title, newsOne,user}) {
+const CommentsItem = require('./CommentItem')
+function NewsPage({title, newsOne,user, comments}) {
   return (
     <Layout title={title} user={user}>
       <h1>{newsOne.tittle}</h1>
@@ -12,6 +12,25 @@ function NewsPage({title, newsOne,user}) {
           {newsOne.description}
         </p>
       </div>
+    </div>
+    {user && (
+      <div>
+        <form action="" method="post" data-id={newsOne.id} className="comment-up container comment-form ">
+        <h1>Комментарии</h1>
+        <div className="container">
+          <label>Написать комментарий </label>
+          <input name="comment" type="text" />
+        </div>
+        <div className="container">
+          <button className="btn btn-primary" type="submit">
+            Отправить
+          </button>
+        </div>
+      </form>
+      </div>
+    )}
+    <div className='all-comment'>
+      {comments.map((comment) => (<CommentsItem key={comment.id} newsOne={newsOne} user={user} comment={comment}></CommentsItem>))}
     </div>
     <li className='nav-item'>
               <a className='nav-link' aria-current='page' href='/'>
