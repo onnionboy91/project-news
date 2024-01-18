@@ -3,7 +3,6 @@ const Layout = require('./Layout');
 const NewsItem = require('./NewsItem');
 
 function HomePage({ title, user, news }) {
-  console.log(news);
   return (
     <Layout title={title} user={user}>
       <div>
