@@ -42,7 +42,7 @@ router.post('/up', async (req, res) => {
       return;
     }
     const hash = await bcrypt.hash(password, 10);
-    const newUser = await User.create({ name, password: hash });
+    const newUser = await User.create({ name, password: hash , isAdmin:false});
 
     const { accessToken, refreshToken } = generateTokens({
       user: { id: newUser.id },

@@ -14,6 +14,10 @@ module.exports = {
         unique: true,
         type: Sequelize.TEXT,
       },
+      isAdmin: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN,
+      },
       img: {
         type: Sequelize.TEXT,
       },
