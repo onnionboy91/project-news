@@ -11,12 +11,12 @@ if (searchForm) {
     });
 
     const data = await res.json();
+    console.log(data);
     if (data.message === 'успех') {
-      document
-        .querySelector('.blabla')
-        .insertAdjacentHTML('beforeend', ' data.html');
-      addForm.reset();
+      const news = document.querySelector('.news-cards');
+      news.innerHTML = data.html;
+      return;
     }
-    res.send(data.message);
+    alert(data.message);
   });
 }

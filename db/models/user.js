@@ -2,8 +2,9 @@
 const { Model, ForeignKeyConstraintError } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
-    static associate({ Word }) {
+    static associate({ Word , Comment}) {
       this.hasMany(Word, { foreignKey: 'user_id' });
+      this.hasMany(Comment, {foreignKey: 'user_id'})
     }
   }
   User.init(
