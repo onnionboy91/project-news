@@ -7,7 +7,8 @@ function NavBar({ user }) {
       <div className='container-fluid'>
         <div className='collapse navbar-collapse' id='navbarNav'>
           <ul className='navbar-nav'>
-            <li className='nav-item'>
+          <div className='rigth-nav'>
+          <li className='nav-item'>
               <a className='nav-link active' aria-current='page' href='/'>
                 Main
               </a>
@@ -19,21 +20,23 @@ function NavBar({ user }) {
             </li>
             <li className='nav-item'>
               <a className='nav-link' href='/'>
-                News
+               News
               </a>
             </li>
             <li className='nav-item'>
               <p className='nav-link'></p>
             </li>
-            {user ? (
+          </div>
+           <div className='left-nav'>
+           {user ? (
               <>
+              <li className='nav-item'>
+              <a className='nav-link' href='#'>
+                {user.name}
+              </a>
+            </li>
                 <li className='nav-item'>
-                  <a className='nav-link' href='#'>
-                    {user.name}
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a className='nav-link' href='/api/sing/logout'>
+                  <a className='nav-link' href='/'>
                     Logout
                   </a>
                 </li>
@@ -52,6 +55,8 @@ function NavBar({ user }) {
                 </li>
               </>
             )}
+           </div>
+            
           </ul>
         </div>
       </div>
