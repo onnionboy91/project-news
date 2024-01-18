@@ -12,19 +12,14 @@ function Layout({ title, children, user }) {
           crossOrigin='anonymous'
         />
 
-        <link rel="stylesheet" href="/styles/style.css" />
-        <script defer src="/scripts/sing.js" />
-        <script defer src="/scripts/search.js" />
-        <script defer src="/scripts/addComment.js" />
-
+        <link rel='stylesheet' href='/styles/style.css' />
+        <script defer src='/scripts/sing.js' />
+        <script defer src='/scripts/search.js' />
+        <script defer src='/scripts/addComment.js' />
+        <script defer src='/scripts/add.js' />
       </head>
       <NavBar user={user} />
-      <body>
-         
-        
-       {children}
-        
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

@@ -21,9 +21,9 @@ router.post('/', upload.single('img'), async (req, res) => {
 
     const newFileUrl = `/img/${req.file.originalname}`;
 
-    const news = await News.create({ tittle, img: newFileUrl, description });
-    
-    const html = res.renderComponent(NewsItem, { news }, { doctype: false });
+    const newsOne = await News.create({ tittle, img: newFileUrl, description });
+
+    const html = res.renderComponent(NewsItem, { newsOne }, { doctype: false });
     res.json({ message: 'success', html });
   } catch ({ message }) {
     res.json({ message: 'error api.news.router' });

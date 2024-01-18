@@ -14,6 +14,7 @@ function NavBar({ user }) {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/">
+
                   News
                 </a>
               </li>
