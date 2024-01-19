@@ -19,7 +19,7 @@ function Layout({ title, children, user }) {
 
       </head>
       <NavBar user={user} />
-      <body>
+      <body className='bg-img'>
          
         
        {children}

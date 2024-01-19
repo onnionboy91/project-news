@@ -1,42 +1,106 @@
-.title {
+.navbar-container{
+  background-color: rgb(55, 57, 57);
   display: flex;
-  justify-content: center;
-}
+  height: 100px;
 
-.card {
-  
+
+}
+.rigth-nav{
+  display: flex;
+  font-size: 32px;
+}
+.left-nav{
+  display: flex;
+  font-size: 32px;
+}
+a{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: black;
+font-size: 30px;
+text-decoration:none;}
+h1{
+  font-family: Arial, Helvetica, sans-serif;
+  width: 1000px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 50px;
   margin: 50px;
-  width: 300px;
-  height: 420px;
+}
+.container-body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.container-form-str {
+  width: 800px;
+  font-size: 25px;
+  color: rgb(3, 3, 30);
+  border-radius: 20px;
+  background-color: aliceblue;
+  padding: 30px
+
+}
+.card{
+  width: 400px;
+  padding: 30px;
+  margin: 15px;
+}
+
+/* /////// news */
+.container-News{
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+
+.new-comment{
+  font-size: 50px;
+  color: black;
+}
+
+.NewsPageCard{
+  margin: 50px;
+  width: 1000px;
+  height: 100%;
+  font-size: 25px;
 
 }
 
+.container-NewsPage{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-items: center;
+}
+.aNewPage{
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+}
+
+.container-logout-NewsPage{
+  margin-bottom: 200px;
+  margin-top: 100px;
+}
+/* 
 input {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
   box-sizing: border-box;
 }
-.navbar-nav{
-  
-  font-size: 24px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-body{
-  background-image: url(https://img.freepik.com/free-photo/top-view-old-french-newspaper-pieces_23-2149318857.jpg?w=1380&t=st=1705569633~exp=1705570233~hmac=79f16626b365866f4d4369357b511f561e3e5655b7798051d5692a29683cdffc);
-  
-  
-}
+
+
 .left-nav {
- 
   display: flex;
   flex-direction: row;
   position: absolute;
   right: 0;
-  
 }
 .rigth-nav {
   display: flex;
@@ -50,39 +114,86 @@ body{
   margin-top: 100px;
   justify-content: center;
   width: 1000px;
-  
 }
-.title {
-  margin-top: 50px;
-  font-size: 50px;
-}
-.container-fluid{
+
+.container-fluid {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #fff; 
   z-index: 100;
- }
- 
- .container {
+}
+
+.container {
   margin-top: 70px;
   width: 600px;
   font-size: 25px;
+}
+ */
 
- }
- .search {
-  display: flex;
-  justify-content: center;
-  /* background-image: url(https://img.freepik.com/free-photo/gray-wall-textures-for-background_74190-4389.jpg); */
- }
 
-#search-news {
-  width: 800px;
-  font-size: 25px;
-  
+
+
+/* ////////////////////////
+
+.navbar {
+  background: silver;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
  
 }
 
-.card-title {
-  
+.container-card {
+  display: flex;
+  align-items: center;
+  width: 1000px;
+  flex-wrap: wrap;
+}
+
+.home-container {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgHome {
+  width: 500px;
+  border-radius: 30px;
+}
+
+.card {
+  width: 500px;
+  height: 400px;
+  margin: 20px;
+}
+.imgCard {
+  width: 100%;
+}
+
+.container {
+  margin: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  background-color: rgb(137, 49, 49);
+  color: black;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-p {
+  margin: 0;
 }

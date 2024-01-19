@@ -3,7 +3,7 @@ const NewsItem = require('./NewsItem');
 
 function NewsCardsList({ news }) {
   return (
-    <div className="news-cards">
+    <div className="news-cards container-News">
       {news.map((newsOne) => (
         <NewsItem key={newsOne.id} newsOne={newsOne} />
       ))}

@@ -3634,13 +3634,7 @@ fieldset:disabled .btn {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-}
+
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
@@ -3725,15 +3719,7 @@ fieldset:disabled .btn {
 .tab-content > .active {
   display: block;
 }
-.navbar {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
+
 .navbar > .container,
 .navbar > .container-fluid,
 .navbar > .container-lg,
