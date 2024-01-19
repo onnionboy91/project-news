@@ -33,6 +33,14 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id',
       },
     },
+    comment_user_name: {
+      allowNull: false,
+      type: DataTypes.TEXT,
+      // references: {
+      //   model: 'Users',
+      //   key: 'name',
+      // },
+    },
     comment: {
       allowNull: false,
       type: DataTypes.TEXT

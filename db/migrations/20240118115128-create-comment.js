@@ -17,6 +17,14 @@ module.exports = {
           key: 'id',
         },
       },
+      comment_user_name: {
+        allowNull: false,
+        type: Sequelize.TEXT,
+        // references: {
+        //   model: 'Users',
+        //   key: 'name',
+        // },
+      },
       news_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
