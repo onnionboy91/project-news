@@ -2,6 +2,7 @@ const React = require('react');
 
 function NavBar({ user }) {
   return (
+
     <nav className="navbar navbar-expand-lg navbar-light bg-light ">
       <div className="container-fluid navbar-container">
         <div className="rigth-nav">
@@ -32,6 +33,7 @@ function NavBar({ user }) {
               </a>
             </>
           )}
+
         </div>
       </div>
     </nav>

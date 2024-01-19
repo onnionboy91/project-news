@@ -27,7 +27,7 @@ router.post('/in', async (req, res) => {
       return;
     }
   } catch ({ message }) {
-    res.json({ message, text: 'ошибка на api-routes-in' });
+    res.json({ message: 'Вы ввели неверный пароль или логин' });
   }
 });
 
@@ -41,8 +41,16 @@ router.post('/up', async (req, res) => {
       });
       return;
     }
+    // console.log(password, rpassword);
+    if (password !== rpassword) {
+      console.log('vs pffffffffffffffffffffffff');
+      res.json({
+        message: 'Пароли не совпадают, НАПИШИ НОРМАЛЬНО ДВА ОДИНКАОВЫХ ПАРОЛЯ',
+      });
+      return;
+    }
     const hash = await bcrypt.hash(password, 10);
-    const newUser = await User.create({ name, password: hash , isAdmin:false});
+    const newUser = await User.create({ name, password: hash, isAdmin: false });
 
     const { accessToken, refreshToken } = generateTokens({
       user: { id: newUser.id },
