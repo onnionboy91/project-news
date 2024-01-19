@@ -8,13 +8,16 @@ function NavBar({ user }) {
           <a className="nav-link active" aria-current="page" href="/">
             <p className="color-a">Главная страничка</p>
           </a>
-          <a className="nav-link" href="/">
+          <a className="nav-link" href="https://ria.ru/">
             <p className="color-a"> Новости</p>
           </a>
         </div>
         <div className="left-nav">
           {user ? (
             <>
+              <a className="nav-link" href="#">
+                <img className="nav__avatar" src={user.img} alt="" />
+              </a>
               <a className="nav-link" href="#">
                 <p className="color-a"> {user.name}</p>
               </a>

@@ -9,7 +9,7 @@ module.exports = {
         {
           user_id: 1,
           news_id: 1,
-          comment: '1111',
+          comment: 'Безобразие',
           comment_user_name: 'Anatoliy',
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -17,7 +17,7 @@ module.exports = {
         {
           user_id: 2,
           news_id: 1,
-          comment: '2222',
+          comment: 'Уууууу',
           comment_user_name: 'Anna',
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -25,7 +25,7 @@ module.exports = {
         {
           user_id: 3,
           news_id: 1,
-          comment: '3333',
+          comment: 'Я не успел попробовать!',
           comment_user_name: 'Vladislav',
           createdAt: new Date(),
           updatedAt: new Date(),

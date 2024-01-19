@@ -2,7 +2,7 @@ const React = require('react');
 
 function AddNewsForm() {
   return (
-    <div className='container'>
+    <div className='container form-add-admin'>
       <form id='add-news'>
         <div className='mb-3'>
           <label htmlFor='exampleInputEmail1' className='form-label'>
