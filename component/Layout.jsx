@@ -20,7 +20,14 @@ function Layout({ title, children, user }) {
         <script defer src='/scripts/delete.js' />
       </head>
       <NavBar user={user} />
-      <body>{children}</body>
+
+      <body className='bg-img'>
+         
+        
+       {children}
+        
+      </body>
+
     </html>
   );
 }

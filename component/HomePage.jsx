@@ -1,18 +1,18 @@
 const React = require('react');
 const Layout = require('./Layout');
-const NewsItem = require('./NewsItem');
+
 const AddNewsForm = require('./AddNewsForm');
 const NewsCardsList = require('./NewsCardsList');
 function HomePage({ title, user, news }) {
   return (
     <Layout title={title} user={user}>
-      {user && user.isAdmin === true && <AddNewsForm />}
-      <div>
-        <h1 className="title">Home page</h1>
-      </div>
+      <div className="container-body">
+        {user && user.isAdmin === true && <AddNewsForm />}
+        <div>
+          <h1 className="title">Home page</h1>
+        </div>
 
-      <div className="search" style={{ margin: '50px' }}>
-        <form id="search-news">
+        <form  className='container-form-str' id="search-news">
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">
               Ключевое слово
@@ -40,9 +40,10 @@ function HomePage({ title, user, news }) {
             Поиск
           </button>
         </form>
+
+        <h1 className="title">Новости</h1>
+        <NewsCardsList news={news} />
       </div>
-      <h1 className="title">Новости</h1>
-      <NewsCardsList news={news} />
     </Layout>
   );
 }
