@@ -1,9 +1,14 @@
 const React = require('react');
 const Layout = require('./Layout');
-function UpdateCommentPage({ title, user, comment}) {
+function UpdateCommentPage({ title, user, comment }) {
   return (
-    <Layout title={title} user={user} >
-         <form data-id={comment.id} data-newsid={comment.news_id}  className='container-form-str  update-comment-form' >
+    <Layout title={title} user={user}>
+      <div className="ubdate-form">
+        <form
+          data-id={comment.id}
+          data-newsid={comment.news_id}
+          className="container-form-str  update-comment-form"
+        >
           <div className="mb-3">
             <label htmlFor="exampleInputPassword1" className="form-label">
               Изменить комментарий
@@ -19,6 +24,7 @@ function UpdateCommentPage({ title, user, comment}) {
             Изменить
           </button>
         </form>
+      </div>
     </Layout>
   );
 }
