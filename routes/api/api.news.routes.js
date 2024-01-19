@@ -43,4 +43,28 @@ router.delete('/:newsId', async (req, res) => {
   }
 });
 
+router.put('/:newsId', upload.single('img'), async (req, res) => {
+  try {
+    console.log(tittle, description);
+    const { tittle, description } = req.body;
+    const { newsId } = req.params;
+
+    const newFileUrl = `/img/${req.file.originalname}`;
+
+    const result = await News.update(
+      {
+        tittle,
+        img: newFileUrl,
+        description,
+      },
+      { where: { id: newsId } }
+    );
+    if (result > 0) {
+      res.json({ message: 'success' });
+    }
+  } catch ({ message }) {
+    res.json({ message: 'error put' });
+  }
+});
+
 module.exports = router;

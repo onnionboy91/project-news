@@ -19,16 +19,11 @@ function Layout({ title, children, user }) {
         <script defer src='/scripts/add.js' />
         <script defer src='/scripts/delete.js' />
         <script defer src='/scripts/updateComment.js' />
+        <script defer src='/scripts/update.js' />
       </head>
       <NavBar user={user} />
 
-      <body className='bg-img'>
-         
-        
-       {children}
-        
-      </body>
-
+      <body className='bg-img'>{children}</body>
     </html>
   );
 }
