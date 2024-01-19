@@ -22,6 +22,7 @@ if (singInForm) {
         return;
       }
       alert(data.message);
+      return;
     }
     alert('Вы оставили пустым пароль или логин');
     return;
@@ -50,6 +51,7 @@ if (singUpForm) {
         return;
       }
       alert(data.message);
+      return;
     }
     alert('Вы оставили пустым пароль или логин');
     return;

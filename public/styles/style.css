@@ -1,10 +1,10 @@
+/* главная страничка НАВБАР */
 .navbar-container{
   background-color: rgb(55, 57, 57);
   display: flex;
   height: 100px;
-
-
 }
+
 .rigth-nav{
   display: flex;
   font-size: 32px;
@@ -15,9 +15,14 @@
 }
 a{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-color: black;
 font-size: 30px;
-text-decoration:none;}
+text-decoration:none;
+}
+.color-a{
+color: aliceblue;
+}
+
+/* форма с ключевыми словами */
 h1{
   font-family: Arial, Helvetica, sans-serif;
   width: 1000px;
@@ -31,6 +36,7 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .container-form-str {
@@ -39,25 +45,104 @@ h1{
   color: rgb(3, 3, 30);
   border-radius: 20px;
   background-color: aliceblue;
-  padding: 30px
-
-}
-.card{
-  width: 400px;
   padding: 30px;
-  margin: 15px;
 }
 
-/* /////// news */
+
+
+/* контейнер с картами */
 .container-News{
   display: flex;
   width: 60%;
   flex-direction: column;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 20px;
+  /* padding: 20px;
+  margin-left: 15%; */
+ 
+  justify-content: center;
+margin-bottom: 200px;
 }
 
+.card{
+  width: 400px;
+  height: 440;
+  padding: 30px;
+  margin: 15px;
+} 
+.foto-card{
+border-radius: 20px;
+width: 350px;
+height: 200px;
+border: 3px solid
+}
+.container-card-text{
+
+  margin-top: 20px;
+  background-color: rgb(190, 223, 251);
+  border-radius: 20px;
+  width: 350px;
+}
+
+/* страничка входа */
+
+.container-flex-in{
+  
+   margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+   margin-bottom: 100px;
+}
+
+.container-sing-in{
+  width: 800px;
+  font-size: 25px;
+  color: rgb(3, 3, 30);
+  border-radius: 20px;
+  background-color: aliceblue;
+  padding: 30px;
+
+}
+.btn-in{
+width: 100px;
+height: 50px;
+font-size: 20px;
+color: black;
+background-color: chartreuse;
+border-color: rgb(2, 2, 2);
+margin-left: 13px;
+}
+
+/* страничка Зарегестрироваться */
+
+.container-flex-up{
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.container-sing-up{
+  width: 800px;
+  font-size: 25px;
+  color: rgb(3, 3, 30);
+  border-radius: 20px;
+  background-color: aliceblue;
+  padding: 30px;
+
+}
+.btn-up{
+
+font-size: 20px;
+color: black;
+background-color: rgb(255, 242, 0);
+border-color: rgb(2, 2, 2);
+margin-left: 13px;
+}
 
 .new-comment{
   font-size: 50px;
