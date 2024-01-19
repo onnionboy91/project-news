@@ -42,7 +42,7 @@ function HomePage({ title, user, news }) {
         </form>
 
         <h1 className="title">Новости</h1>
-        <NewsCardsList news={news} />
+        <NewsCardsList news={news}  user={user}/>
       </div>
     </Layout>
   );

@@ -1,6 +1,6 @@
 const React = require('react');
 
-function NewsItem({ newsOne }) {
+function NewsItem({ newsOne , user}) {
   return (
     <div className="card">
       <img src={newsOne.img} className="card-img-top" alt={`${newsOne.id}`} />

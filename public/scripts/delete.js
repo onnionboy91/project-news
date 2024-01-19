@@ -1,5 +1,5 @@
 const deleteNews = document.querySelector('.news-cards');
-console.log(deleteNews);
+
 if (deleteNews) {
   deleteNews.addEventListener('click', async (e) => {
     if (e.target.classList.contains('delete')) {
